@@ -41,4 +41,7 @@ public class HelloWorld {
         x++;
         System.out.println("MAXVAL + 1 " + x);
     }
+
+
+    double pi = 3.14159;
 }
