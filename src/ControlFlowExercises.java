@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ControlFlowExercises {
     public static void main(String[] args) {
 //        int i = 5;
@@ -34,15 +36,29 @@ public class ControlFlowExercises {
 //            System.out.println("i is " + i);
 //        }
 
-        for(byte i = 0; i <= 100; i++){
-            boolean check = true;
-            if(i % 5 == 0 && i % 3 == 0){
-                System.out.println("FizzBuzz");
-            }else if(i % 3 == 0){
-                System.out.println("Fizz");
-            } else if(i % 5 == 0){
-                System.out.println("Buzz");
-            }
+//        for(byte i = 0; i <= 100; i++){
+//            boolean check = true;
+//            if(i % 5 == 0 && i % 3 == 0){
+//                System.out.println("FizzBuzz");
+//            }else if(i % 3 == 0){
+//                System.out.println("Fizz");
+//            } else if(i % 5 == 0){
+//                System.out.println("Buzz");
+//            }
+//        }
+
+        Scanner input = new Scanner((System.in));
+
+
+        System.out.println("Please enter a number");
+        int number = input.nextInt();
+
+        System.out.println("number | squared | cubed");
+        System.out.println("------ | ------- | -----");
+
+        for(int i = 0; i <= number; i++){
+
+            System.out.println(number+"      |"+ i * i +"        |"+ i * i * i+"     ");
         }
 
     }
