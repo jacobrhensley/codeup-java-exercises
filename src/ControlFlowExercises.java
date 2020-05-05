@@ -47,19 +47,48 @@ public class ControlFlowExercises {
 //            }
 //        }
 
-        Scanner input = new Scanner((System.in));
+//        Scanner input = new Scanner((System.in));
+//
+//
+//        System.out.println("Please enter a number");
+//        int number = input.nextInt();
+//
+//        System.out.println("number | squared | cubed");
+//        System.out.println("------ | ------- | -----");
+//
+//        for(int i = 0; i <= number; i++){
+//
+//            System.out.println(number+"      |"+ i * i +"        |"+ i * i * i+"     ");
+//        }
 
 
-        System.out.println("Please enter a number");
-        int number = input.nextInt();
 
-        System.out.println("number | squared | cubed");
-        System.out.println("------ | ------- | -----");
+        Scanner scanner = new Scanner(System.in);
 
-        for(int i = 0; i <= number; i++){
+        boolean anotherGrade = true;
 
-            System.out.println(number+"      |"+ i * i +"        |"+ i * i * i+"     ");
-        }
+        do {
+            System.out.print("Please enter a numerical grade from 0 to 100 ");
 
+            int numericGrade = scanner.nextInt();
+
+            if (numericGrade >= 88) {
+                System.out.println("A");
+            } else if (numericGrade >= 80) {
+                System.out.println("B");
+            } else if (numericGrade >= 67) {
+                System.out.println("C");
+            } else if (numericGrade >= 60) {
+                System.out.println("D");
+            } else {
+                System.out.println("F");
+            }
+
+            System.out.print("Do you wish to enter a new grade? ");
+            String userResponse = scanner.next();
+            if (!userResponse.equalsIgnoreCase("y")) {
+                anotherGrade = false;
+            }
+        } while (anotherGrade);
     }
 }
