@@ -15,6 +15,10 @@ public class Person {
         this.isAlive = isAlive;
     }
 
+    public Person() {
+
+    }
+
     public String sayHello(){
         if(this.isAlive){
             return String.format("Hello from %s %s!", this.firstName, this.lastName);
